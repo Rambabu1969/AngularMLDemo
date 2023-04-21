@@ -15,12 +15,14 @@ export class AppComponent {
 
   Area:any = 1000;
   Bedrooms:any = 2;
-  Bathrooms:any = 1;
+  Bathrooms:any = 2;
   formValue:any;
   
   onSubmit(form:any){
     this.formValue=form.value;
     console.log(form.value);
+
+    console.log(this.formValue.Area);
 
     this.getPrice(form.value);
   }
