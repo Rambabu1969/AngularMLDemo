@@ -15,15 +15,14 @@ export class ServiceService {
   constructor(private http: HttpClient) { }
 
 
-  url:any = "http://13.233.164.98/predictPrice";
+  url:any = "http://13.233.145.243/mru359/predictPrice";
 
   predictPrice(data:any): Observable<any> {
-    //console.log(data);
-
-    //console.log(this.url+ "?Area=" + data.Area + "&BedRooms=" + data.Bedrooms + "&BathRooms=" + data.Bathrooms);
+    
+    console.log(this.url+ "?bedRooms=" + data.Bedrooms + "&bathRooms=" + data.Bathrooms + "&area=" + data.Area);
 
     return this.http
-      .get<any>(this.url+ "?Area=" + data.Area + "&BedRooms=" + data.Bedrooms + "&BathRooms=" + data.Bathrooms)
+      .get<any>(this.url+ "?bedRooms=" + data.Bedrooms + "&bathRooms=" + data.Bathrooms + "&area=" + data.Area);
   }
 
 }
