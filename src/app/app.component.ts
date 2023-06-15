@@ -31,7 +31,7 @@ export class AppComponent {
   getPrice(data: any) {
     return this.serviceService.predictPrice(data).subscribe((response: {}) => {
       let data: any = response;
-      this.data=data;
+      this.data=data[0];
       
       console.log(response);
     });
